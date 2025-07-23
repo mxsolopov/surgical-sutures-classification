@@ -36,3 +36,16 @@ The following pre-trained CNN architectures were evaluated using transfer learni
    - Fine-tuning with unfrozen base layers
 4. 5-fold stratified cross-validation
 5. Performance metrics: F1-score, AUC-ROC, Precision, Recall, Accuracy
+
+## 📊 Analysis Notebooks
+### score_adj.ipynb
+- **Weighted Scoring Analysis**: Calculates adjusted scores (Score_adj) for CNN architectures
+- Combines multiple metrics (accuracy, precision, recall, F1-score, AUC) with custom weights
+- Applies variability correction factor (μ = 0.5) to account for cross-validation variance  
+- Provides comprehensive ranking of architectures across all suture types
+
+### statistical_analysis.ipynb
+- **Statistical Comparison of F1-scores**: Non-parametric analysis using Kruskal-Wallis test
+- Compares F1-score medians across 8 CNN architectures for each suture type
+- Includes post-hoc analysis with Dunn's test when significant differences are found
+- Provides evidence-based recommendations for architecture selection
